@@ -13,9 +13,6 @@ public class CameraControl : MonoBehaviour
     void Update()
     {
         lastMouse = Input.mousePosition - lastMouse;
-        // if (lastMouse == Vector3.zero)
-        //     return;
-        // Debug.Log("postion" + transform.position);
         lastMouse = new Vector3(-lastMouse.y * camSens, lastMouse.x * camSens, 0);
         lastMouse = new Vector3(transform.eulerAngles.x + lastMouse.x, transform.eulerAngles.y + lastMouse.y, 0);
         transform.eulerAngles = lastMouse;
