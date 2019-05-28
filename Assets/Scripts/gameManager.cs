@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class gameManager : MonoBehaviour {
 
-	public GameObject	ball;
-	public RectTransform panel;
+	public GameObject		ball;
+	public RectTransform	panel;
 
 	[SerializeField] private float	_power;
 	private int		_direction = 1;
@@ -43,6 +43,6 @@ public class gameManager : MonoBehaviour {
 	}
 
 	private void Shoot() {
-		ball.GetComponent<Rigidbody>().velocity = Vector3.up * _power * 0.1f;
+		ball.GetComponent<Rigidbody>().velocity = Vector3.forward * _power * 0.1f;
 	}
 }
